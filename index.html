@@ -1,1 +1,18 @@
-aaa
+<!DOCTYPE html>
+<html>
+<head>
+    <title>即時影片串流</title>
+</head>
+<body>
+    <h1>即時影片串流</h1>
+    <video id="cameraVideo" width="640" height="480" autoplay playsinline></video>
+    
+    <script>
+        var video = document.getElementById('cameraVideo');
+        video.src = "http://<ESP32的IP地址>:80/video"; // 將 <ESP32的IP地址> 替換為您的ESP32的實際IP地址
+        video.load();
+        video.play();
+    </script>
+</body>
+</html>
+
